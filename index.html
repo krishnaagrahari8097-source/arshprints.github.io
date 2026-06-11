@@ -1,0 +1,479 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="style.css">
+
+<title>ARSHPRINTS</title>
+</head>
+<body>
+
+<nav>
+
+<div class="logo">
+ARSH<span>PRINTS</span>
+
+<ul class="nav-links">
+    
+    <li><a href="#home">Home</a></li>
+    <li><a href="#categories">Categories</a></li>
+    <li><a href="#products">Products</a></li>
+    <li><a href="#cart">Cart (<span id="cart-count">0</span>)</a></li>
+    <li><a href="#reviews">Reviews</a></li>
+    <li><a href="#contact">Contact</a></li>
+</ul>
+
+</nav>
+
+<section id="home" class="hero">
+<div class="hero-left">
+
+<span class="badge">ARSHPRINTS</span>
+
+<h1>
+CUSTOM GIFTS <br>
+THAT CREATE MEMORIES
+</h1>
+
+<p>
+Premium Customized T-Shirts,
+Mugs, Keychains, Lanyards &
+Corporate Gifts.
+</p>
+
+<div class="buttons">
+<a href="#" class="btn">Order On WhatsApp</a>
+<a href="#" class="btn-outline">View Products</a>
+</div>
+
+</div>
+
+<div class="hero-right">
+
+<img src="assets/hero.png" alt="ARSH Products">
+
+</div>
+
+<section class="stats">
+
+<div class="stat-box">
+<h2>500+</h2>
+<p>Orders Completed</p>
+</div>
+
+<div class="stat-box">
+<h2>98%</h2>
+<p>Customer Satisfaction</p>
+</div>
+
+<div class="stat-box">
+<h2>24/7</h2>
+<p>Support</p>
+</div>
+
+</section>
+
+</section>
+
+<section id="categories" class="categories"></section>
+
+<h2>Shop By Category</h2>
+
+<div class="grid">
+
+<div class="card">
+<h3>T-Shirts</h3>
+<p>Premium custom printed t-shirts</p>
+</div>
+<div class="card">
+<h3>Mugs</h3>
+<p>Personalized photo mugs</p>
+</div>
+
+<div class="card">
+<h3>Keychains</h3>
+<p>Custom acrylic keychains</p>
+</div>
+
+<div class="card">
+<h3>Lanyards</h3>
+<p>Corporate & event lanyards</p>
+</div>
+
+<div class="card">
+<h3>Photo Frames</h3>
+<p>Memorable personalized frames</p>
+</div>
+
+<div class="card">
+<h3>Corporate Gifts</h3>
+<p>Bulk gifting solutions</p>
+</div>
+</div>
+
+</section>
+<section class="featured-products">
+
+    <div class="section-title">
+        <h2>Featured Products</h2>
+        <p>Our Best Selling Products</p>
+    </div>
+
+    <div class="product-grid">
+
+        <div class="product-card">
+            <img src="images/tshirt.jpg" alt="">
+            <h3>Custom T-Shirt</h3>
+            <p>Starting ₹299</p>
+            <button onclick="addToCart('Custom T-Shirt',299)">
+    Add To Cart
+</button>
+        </div>
+
+        <div class="product-card">
+            <img src="images/mug.jpg" alt="">
+            <h3>Photo Mug</h3>
+            <p>Starting ₹199</p>
+            <button onclick="addToCart('Photo Mug',199)">
+    Add To Cart
+</button>
+        </div>
+
+        <div class="product-card">
+            <img src="images/keychain.jpg" alt="">
+            <h3>Custom Keychain</h3>
+            <p>Starting ₹49</p>
+            <button onclick="addToCart('Custom Keychain',49)">
+    Add To Cart
+</button>
+
+        </div>
+
+        <div class="product-card">
+            <img src="images/lanyard.jpg" alt="">
+            <h3>Custom Lanyard</h3>
+            <p>Starting ₹39</p>
+            <button onclick="addToCart('Custom Lanyard',39)">
+    Add To Cart
+</button>
+    
+        </div>
+
+    </div>
+
+</section>
+<section id="products" class="products"></section>
+
+    <div class="section-title">
+        <h2>Best Selling Products</h2>
+        <p>Most Loved Products By Our Customers</p>
+    </div>
+
+    <div class="product-grid">
+
+        <div class="product-card">
+            <button class="product-btn">View Details</button>
+            <img src="lanyard.jpg">
+            <h3>Premium Lanyard</h3>
+            <p>₹39 onwards</p>
+        </div>
+
+        <div class="product-card">
+            <button class="product-btn">View Details</button>
+            <img src="keychain.jpg">
+            <h3>Acrylic Keychain</h3>
+            <p>₹49 onwards</p>
+        </div>
+
+        <div class="product-card">
+            <button class="product-btn">View Details</button>
+            <img src="mug.jpg">
+            <h3>Photo Mug</h3>
+            <p>₹199 onwards</p>
+        </div>
+
+        <div class="product-card">
+            <button class="product-btn">View Details</button>
+            <img src="tshirt.jpg">
+            <h3>Custom T-Shirt</h3>
+            <p>₹299 onwards</p>
+        </div>
+
+    </div>
+
+</section>
+<section id="cart" class="cart-section">
+
+    <div class="section-title">
+        <h2>Your Cart</h2>
+    </div>
+
+    <div id="cart-items"></div>
+
+<div class="cart-total-box">
+    <h2>Total: ₹<span id="cart-total">0</span></h2>
+</div>
+
+<button onclick="clearCart()" class="clear-cart-btn">
+    Clear Cart
+</button>
+
+<button onclick="sendWhatsApp()" class="order-btn">
+    Send Order
+</button>
+
+
+</section>
+<section id="reviews" class="reviews">
+
+    <div class="section-title">
+        <h2>Customer Reviews</h2>
+    </div>
+
+    <div class="review-grid">
+
+        <div class="review-card">
+            ⭐⭐⭐⭐⭐
+            <p>"Excellent print quality and fast delivery."</p>
+            <h4>- Rahul</h4>
+        </div>
+
+        <div class="review-card">
+            ⭐⭐⭐⭐⭐
+            <p>"Loved the custom lanyards for our event."</p>
+            <h4>- Priya</h4>
+        </div>
+
+        <div class="review-card">
+            ⭐⭐⭐⭐⭐
+            <p>"Best prices and premium quality."</p>
+            <h4>- Amit</h4>
+        </div>
+
+    </div>
+
+</section>
+
+<section class="order-section">
+
+    <div class="section-title">
+        <h2>Place Your Order</h2>
+        <p>Tell us what you need and we'll contact you.</p>
+    </div>
+
+    <form id="orderForm">
+
+        <input type="text" id="name" placeholder="Your Name" required>
+
+        <input type="tel" id="phone" placeholder="Mobile Number" required>
+        <input type="text" id="address" placeholder="Full Address" required>
+
+<input type="text" id="pincode" placeholder="Pincode" required>
+
+        <select id="product">
+            <option>T-Shirt</option>
+            <option>Mug</option>
+            <option>Keychain</option>
+            <option>Lanyard</option>
+            <option>Corporate Gift</option>
+        </select>
+
+        <textarea id="message" placeholder="Order Details"></textarea>
+
+       <button type="button" onclick="sendWhatsApp()">
+    Send Order
+</button>
+    </form>
+
+</section>
+<section id="contact" class="contact"></section>
+
+    <div class="section-title">
+        <h2>Contact ARSHPRINTS</h2>
+        <p>Get a quote or place your custom order</p>
+    </div>
+
+    <div class="contact-box">
+
+        <h3>📞 Call / WhatsApp</h3>
+        <p>+91 8097446200</p>
+        <p>+91 8097671673</p>
+
+        <h3>📧 Email</h3>
+        <p>arshprintofficial@gmail.com</p>
+
+        <h3>📍 Location</h3>
+        <p>Vashi , Maharashtra</p>
+
+        <a href="https://wa.me/918097446200" class="contact-btn">
+            Order on WhatsApp
+        </a>
+
+    </div>
+
+</section>
+<footer>
+    <p>© 2026 ARSHPRINTS. All Rights Reserved.</p>
+</footer>
+<a href="https://wa.me/918097446200" class="whatsapp">
+💬
+</a>
+<script>
+function sendWhatsApp(){
+
+let name = document.getElementById("name").value;
+let phone = document.getElementById("phone").value;
+let message = document.getElementById("message").value;
+let address = document.getElementById("address").value;
+let pincode = document.getElementById("pincode").value;
+let cartText = "";
+
+cart.forEach(item => {
+    cartText += item.name + " - ₹" + item.price + "\n";
+});
+
+let total =
+document.getElementById("cart-total").innerText;
+let text =
+"ARSHPRINTS ORDER\n\n" +
+"Name: " + name + "\n" +
+"Phone: " + phone + "\n\n" +
+"Products:\n" +
+cartText + "\n" +
+"Total: ₹" + total + "\n\n" +
+"Message: " + message;
+
+let url =
+"https://wa.me/918097446200?text=" +
+encodeURIComponent(text);
+
+window.open(url, "_blank");
+
+}
+
+
+</script>
+<script>
+
+let cart = [];
+function addToCart(name, price){
+let existing = cart.find(item => item.name === name);
+
+if(existing){
+
+    existing.qty++;
+
+}else{
+
+    cart.push({
+        name:name,
+        price:price,
+        qty:1
+    });
+
+}
+
+updateCart();
+
+
+}
+
+
+function updateCart(){
+
+    let cartItems =
+        document.getElementById("cart-items");
+
+    let cartCount =
+        document.getElementById("cart-count");
+
+    let cartTotal =
+        document.getElementById("cart-total");
+
+    cartItems.innerHTML = "";
+
+    let total = 0;
+
+    cart.forEach(item => {
+
+    total += item.price * item.qty;
+
+    cartItems.innerHTML += `
+    <div class="cart-item">
+       <div class="cart-item">
+    ${item.name}
+
+<button onclick="decreaseQty('${item.name}')">-</button>
+
+<span>${item.qty}</span>
+
+<button onclick="increaseQty('${item.name}')">+</button>
+
+₹${item.price * item.qty}
+
+<button onclick="removeItem('${item.name}')">
+    Remove
+</button>
+
+
+</div>
+
+    </div>`;
+});
+
+    cartCount.innerText =
+cart.reduce((sum,item) => sum + item.qty, 0);
+    cartTotal.innerText = total;
+}
+function removeItem(name){
+
+cart = cart.filter(item => item.name !== name);
+
+updateCart();
+
+}
+function clearCart(){
+
+    cart = [];
+
+    updateCart();
+
+}
+function increaseQty(name){
+
+    let item = cart.find(i => i.name === name);
+
+    if(item){
+        item.qty++;
+    }
+
+    updateCart();
+}
+
+function decreaseQty(name){
+
+    let item = cart.find(i => i.name === name);
+
+    if(item){
+
+        if(item.qty > 1){
+            item.qty--;
+        }else{
+            removeItem(name);
+            return;
+        }
+
+    }
+
+    updateCart();
+}
+
+</script>
+</body>
+</html>
