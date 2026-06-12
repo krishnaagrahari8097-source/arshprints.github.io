@@ -560,3 +560,13 @@ cursor:pointer;
     margin-top:10px;
     margin-left:10px;
 }
+.quote-btn{
+    background:#007bff;
+    color:white;
+    border:none;
+    padding:12px 20px;
+    border-radius:8px;
+    cursor:pointer;
+    margin-top:10px;
+    margin-left:10px;
+}
