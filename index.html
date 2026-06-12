@@ -129,7 +129,7 @@ Corporate Gifts.
     <div class="product-grid">
 
         <div class="product-card">
-            <img src="" alt="">
+           <img src="tshirt.jpg" alt="Custom T-Shirt">
             <h3>Custom T-Shirt</h3>
             <p>Starting ₹299</p>
             <button onclick="addToCart('Custom T-Shirt',299)">
@@ -288,7 +288,8 @@ Corporate Gifts.
 
 <button type="button" onclick="saveCustomerDetails()">
     Save My Details
-    <label>Upload Design / Logo</label>
+</button>
+<label>Upload Design / Logo</label>
 
 <input
 type="file"
@@ -296,7 +297,6 @@ id="designFile"
 accept=".jpg,.jpeg,.png,.pdf">
 
 <p id="fileName">No file selected</p>
-</button>
 
         <select id="product">
             <option>T-Shirt</option>
@@ -534,7 +534,8 @@ function generateQuotation(){
 
     document.getElementById("quoteDate").innerText =
     new Date().toLocaleDateString();
-
+let quoteNo =
+localStorage.getItem("quoteNumber") || 1;
     document.getElementById("quoteNumber").innerText =
 "ARSH-2026-" +
 String(quoteNo).padStart(3,"0");
@@ -673,8 +674,9 @@ window.onload = function(){
 
     document.getElementById("pincode").value =
     localStorage.getItem("customerPincode") || "";
-loadOrderHistory();
-
+if(document.getElementById("history-list")){
+    loadOrderHistory();
+}
 };
 function loadOrderHistory(){
 
